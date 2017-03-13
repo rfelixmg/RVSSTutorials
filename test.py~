@@ -1,0 +1,69 @@
+#!/usr/bin/env python2
+
+import matplotlib.pyplot as plt
+import matplotlib.tri as tri
+import numpy as np
+import math
+from scipy.spatial import Voronoi, voronoi_plot_2d
+from operator import itemgetter
+from numpy import linalg as LA
+import matplotlib.path as mplPath
+
+from utils import (sortPoints,cart2pol,sign,pointInPolygon,bisectPolygon,
+				   getMidPoints,addConnection,pointToLineDistance,lineToLineDistance,distance,
+				   intersect,ccw)
+
+#================================================================================
+#================================================================================
+
+# Exploration path function
+
+#================================================================================
+#================================================================================
+
+def generateLoop(nBisections,minDistance,direction,ptsIn,ptsOut,ptsObs):
+	"Generates path from voronoi diagram"
+	#Inputs
+	#	nBisections - (int) no. times to bisect hexagon sides
+	#	minDistance - (float) closest turtlebot centre can be from obstacles
+	#	direction   - (string) 'anticlockwise'/'clockwise': direction to move in
+
+	#Outputs
+	#	orderedPoses   - (array) nPoses x 3, each row = [x,y,theta] in global coords
+	#				   - ordered array of poses forming safest path for robot to move in
+	#	orderedQuivers - (array) nPoses x 4, each row = [x,y,dX,dY] in global coords
+	#	               - [dX dY] is vector to next pose. this variable is best used for 
+	#				   - plotting
+	
+	#Code here...
+	
+	return orderedPoses,orderedQuivers
+
+
+
+#================================================================================
+#================================================================================
+
+# Task path function
+
+#================================================================================
+#================================================================================
+def generateTaskPath(ptGoal,ptsIn,ptsOut,ptsObs,orderedPoses,task,safeDistance):
+	"Given a goal point, outputs points necessary to complete pushing task"
+	#Inputs
+	#	ptGoal - (array), position of object to perform task with
+	#	ptsIn  - (array), positions of cylinders forming triangle boundary
+	#	ptsOut - (array), positions of cylinders forming hexagon boundary
+	#	ptsObs - (array), positions of obstacles
+	#	orderedPoses - (array), poses forming safe path
+	#	task         - (string), 'inside'/'outside' - where to put object
+	#	safeDistance - (float), min distance turtlebot centre can be from any obstacle
+
+	#Outputs
+	#	iLeavePt1 - (int), index of closest point on safe path to object
+	#	iLeavePt2 - (int), index of point on safe path to leave and drop off object
+	#	dropOffPt - (array), point to leave object at	
+
+
+
+	return iLeavePt1,iLeavePt2,dropOffPt
