@@ -1,0 +1,8 @@
+prefix=/home/chuong/Documents/RVSS2017-presentations/python_ROS_tutorials/workspace_ros/devel
+
+Name: pybot
+Description: Description of pybot
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/chuong/Documents/RVSS2017-presentations/python_ROS_tutorials/workspace_ros/devel/lib 
+Requires: 

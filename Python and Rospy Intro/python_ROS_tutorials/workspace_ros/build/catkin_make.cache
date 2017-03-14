@@ -1,0 +1,2 @@
+pybot
+-DCATKIN_DEVEL_PREFIX=/home/chuong/Documents/RVSS2017-presentations/python_ROS_tutorials/workspace_ros/devel -DCMAKE_INSTALL_PREFIX=/home/chuong/Documents/RVSS2017-presentations/python_ROS_tutorials/workspace_ros/install -G Unix Makefiles
